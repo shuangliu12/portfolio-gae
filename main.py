@@ -22,10 +22,10 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     loader = jinja2.FileSystemLoader('templates')
   )
 
-class BaseHandler(webapp2.RequestHandler):
+class HomeHandler(webapp2.RequestHandler):
   def get(self):
   	vars = {'title': 'home'}
-  	template = JINJA_ENVIRONMENT.get_template("base.html")
+  	template = JINJA_ENVIRONMENT.get_template("home.html")
   	self.response.out.write(template.render(vars))
 
 class IconsHandler(webapp2.RequestHandler):
@@ -50,5 +50,5 @@ app = webapp2.WSGIApplication([
   ('/icons', IconsHandler),
   ('/illustrations', IllustrationsHandler),
   ('/paintings', PaintingsHandler),
-  ('/.*', BaseHandler)
+  ('/.*', HomeHandler)
 ], debug=True)
