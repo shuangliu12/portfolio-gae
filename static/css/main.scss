@@ -1,0 +1,139 @@
+@import 'pages/gallery';
+@import 'pages/icons';
+@import 'pages/index';
+@import 'helpers/variables';
+
+body,div,ul,li,h1,h2,h3,h4,h5,h6,p {
+  margin:0;
+  padding:0;
+}
+
+body {
+	background-color: #F5EAEA;
+	font-family: $bodyFont, sans-serif;
+}
+
+header {
+  background:url(../img/octocat.png);
+  background-repeat: no-repeat;
+  background-color: $octocatBackgroundColor;
+
+  padding: $headerPaddingTop 0 0 145px;
+  height: 234 - $headerPaddingTop;
+
+	.logo {
+		display: inline-block;
+		animation: nameSpin 10s infinite;
+		border: black solid 2px;
+		padding: 3px;
+	}
+
+	@keyframes nameSpin {
+	  0% {
+	    transform: rotateY(0);
+	  }
+	  100% {
+	    transform: rotateY(360deg);
+	  }
+	}
+}
+
+nav {
+	background-color: $octocatComplementaryColor;
+
+  .navLinks {
+  	overflow: hidden;
+  }
+
+  ul {
+		list-style-type: none;
+	}
+
+	li {
+		padding: 10px 0;
+	}
+
+	@media screen and (min-width: $desktopWidth) {
+	  .navLinks {
+	    display: table;
+	    margin: 0 auto;
+	  }
+	  li {
+	  	// float left to remove small space appearing between list items
+			float: left;
+	  }
+	}
+
+	@media screen and (min-width: $tabletWidth) and (max-width: $desktopWidth - 1) {
+		ul {
+			display: table;
+			width: 100%;
+		}
+		li {
+			display: table-cell;
+			text-align: center;
+		}
+	}
+
+	@media screen and (max-width: $tabletWidth - 1) {
+		.navLinks {
+			text-align: center;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+		font-size: 2em;
+		padding: 10px 10px;
+	}
+
+	a:hover:not(.currentPage) {
+    background-color: $octocatDarkColor;
+	}
+
+	.currentPage {
+		background-color: #B16B97;
+	}
+}
+
+footer {
+	background-color: $octocatComplementaryColor;
+	margin-top: 20px;
+
+  ul {
+		list-style-type: none;
+	}
+
+	li {
+		display: inline;
+		padding-right: 15px;
+
+		.fa {
+			color: black;
+		}
+		.fa:hover {
+			color: #B026FF;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	@media screen and (min-width: $desktopWidth) {
+		text-align: right;
+	}
+
+	@media screen and (max-width: $desktopWidth - 1) {
+		ul {
+			display: table;
+			width: 100%;
+		}
+		li {
+			display: table-cell;
+			text-align: center;
+		}
+	}
+}

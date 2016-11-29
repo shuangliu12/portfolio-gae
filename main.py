@@ -24,25 +24,25 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 class BaseHandler(webapp2.RequestHandler):
   def get(self):
-  	vars = {'title': 'Home'}
+  	vars = {'title': 'home'}
   	template = JINJA_ENVIRONMENT.get_template("base.html")
   	self.response.out.write(template.render(vars))
 
 class IconsHandler(webapp2.RequestHandler):
   def get(self):
-  	vars = {'title': 'Icons'}
+  	vars = {'title': 'icons'}
   	template = JINJA_ENVIRONMENT.get_template("icons.html")
   	self.response.out.write(template.render(vars))
 
 class IllustrationsHandler(webapp2.RequestHandler):
   def get(self):
-  	vars = {'title': 'Illustrations'}
+  	vars = {'title': 'illustrations'}
   	template = JINJA_ENVIRONMENT.get_template("illustrations.html")
   	self.response.out.write(template.render(vars))
 
 class PaintingsHandler(webapp2.RequestHandler):
   def get(self):
-  	vars = {'title': 'Paintings'}
+  	vars = {'title': 'paintings'}
   	template = JINJA_ENVIRONMENT.get_template("paintings.html")
   	self.response.out.write(template.render(vars))
 

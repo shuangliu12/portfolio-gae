@@ -1,0 +1,28 @@
+@import '../helpers/variables';
+
+@mixin resize {
+  @media screen and (min-width: $desktopWidth) {
+      width: 50%;
+    }
+    @media screen and (min-width: $tabletWidth) and (max-width: $desktopWidth - 1) {
+      width: 75%;
+    }
+    @media screen and (max-width: $tabletWidth - 1) {
+      width: 100%;
+    }
+}
+
+.icon {
+  margin-top: 5%;
+  .iconTitle {
+    @include resize;
+    margin: 0 auto;
+  }
+  .gallery_image {
+    background: none;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}

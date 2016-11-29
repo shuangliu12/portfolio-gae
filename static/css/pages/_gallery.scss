@@ -1,0 +1,54 @@
+@import '../helpers/variables';
+
+@mixin resize {
+  @media screen and (min-width: $desktopWidth) {
+      width: 50%;
+    }
+    @media screen and (min-width: $tabletWidth) and (max-width: $desktopWidth - 1) {
+      width: 75%;
+    }
+    @media screen and (max-width: $tabletWidth - 1) {
+      width: 100%;
+    }
+}
+
+.gallery_image {
+  margin-top: 15px;
+  background-color: white;
+
+  @include resize;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	figcaption {
+		padding-bottom: 10px;
+	}
+
+	img {
+		width: 100%;
+		padding: 5% 0;
+	}
+}
+
+.oil_paintings {
+  figcaption {
+    padding-left: 10%;
+  }
+}
+
+.statement {
+    font-size: 1.2em;
+    margin: 0 auto;
+    margin-top: 5%;
+    p{
+      margin: 15px auto;
+    }
+
+    @include resize;
+  }
+
+
+
+
+
