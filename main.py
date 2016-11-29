@@ -47,8 +47,8 @@ class PaintingsHandler(webapp2.RequestHandler):
   	self.response.out.write(template.render(vars))
 
 app = webapp2.WSGIApplication([
-  ('/', BaseHandler),
   ('/icons', IconsHandler),
   ('/illustrations', IllustrationsHandler),
-  ('/paintings', PaintingsHandler)
+  ('/paintings', PaintingsHandler),
+  ('/.*', BaseHandler)
 ], debug=True)
