@@ -5,7 +5,7 @@
     <meta content="utf-8" http-equiv="encoding">
     <link rel="icon" href="lib/img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shuang Liu</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="lib/css/main.css">
     <link rel="stylesheet" href="lib/css/font-awesome/css/font-awesome.min.css">
   </head>
@@ -22,13 +22,15 @@
     <nav>
       <div class="navLinks">
         <ul>
-          <li><a class="currentPage" href="index.html">Home</a></li>
-          <li><a href="oil_paintings.html">Oil Paintings</a></li>
-          <li><a href="illustrations.html">Illustrations</a></li>
-          <li><a href="icons.html">Icons</a></li>
+          <li><a class="currentPage" href="/">Home</a></li>
+          <li><a href="paintings">Oil Paintings</a></li>
+          <li><a href="illustrations">Illustrations</a></li>
+          <li><a href="icons">Icons</a></li>
         </ul>
       </div>
     </nav>
+
+{% block content %}
 
     <section class="aboutMe">
       <h2>Hello, I am Shuang</h2>
@@ -37,6 +39,8 @@
       <p> Before graduate school, I was living in Boston. It was fun to live in an urban city with lots of activies. But after I moved to Ann Arbor, I have been enjoying this peaceful yet hip town. Ann Arbor is a small town with everything.
       </p>
     </section>
+
+{% endblock %}
 
     <footer>
       <ul>

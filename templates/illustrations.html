@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    <link rel="icon" href="lib/img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shuang Liu</title>
-    <link rel="stylesheet" href="lib/css/main.css">
-    <link rel="stylesheet" href="lib/css/font-awesome/css/font-awesome.min.css">
-  </head>
+{% extends 'base.html' %}
 
-  <body>
-    <header>
-      <h1>Shuang Liu</h1>
-      <h2>UX Designer</h2>
-      <div class='logo'>
-        <p>SL</p>
-      </div>
-    </header>
-
-    <nav>
-      <div class="navLinks">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="oil_paintings.html">Oil Paintings</a></li>
-          <li><a class="currentPage" href="illustrations.html">Illustrations</a></li>
-          <li><a href="icons.html">Icons</a></li>
-        </ul>
-      </div>
-    </nav>
-
+{% block content %}
     <section class="illustrations">
       <figure class="gallery_image">
         <img src="lib/img/illustrations/my_best_friend.png" alt="a girl holding hands of her self">
@@ -66,22 +37,6 @@
         <figcaption>The Path to One's Heart is through the Stomach</figcaption>
       </figure>
     </section>
+{% endblock %}
 
-    <footer>
-      <ul>
-        <li>
-          <a href="mailto:shuangliu12@gmail.com"><i class="fa fa-4x fa-envelope-square"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/sl_illustration/" target="_blank"><i class="fa fa-4x fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/shuangliu12" target="_blank"><i class="fa fa-4x fa-linkedin-square"></i></a>
-        </li>
-        <li>
-          <a href="https://github.com/shuangliu12" target="_blank"><i class="fa fa-4x fa-github-square"></i></a>
-        </li>
-      </ul>
-    </footer>
-  </body>
-</html>
+    

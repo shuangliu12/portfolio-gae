@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 import webapp2
 import jinja2
 
@@ -23,24 +24,27 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 class BaseHandler(webapp2.RequestHandler):
   def get(self):
-    template = JINJA_ENVIRONMENT.get_template("base.html")
-    self.response.out.write(template.render())
+  	vars = {'title': 'Home'}
+  	template = JINJA_ENVIRONMENT.get_template("base.html")
+  	self.response.out.write(template.render(vars))
 
 class IconsHandler(webapp2.RequestHandler):
   def get(self):
-    template = JINJA_ENVIRONMENT.get_template("icons.html")
-    self.response.out.write(template.render())
+  	vars = {'title': 'Icons'}
+  	template = JINJA_ENVIRONMENT.get_template("icons.html")
+  	self.response.out.write(template.render(vars))
 
 class IllustrationsHandler(webapp2.RequestHandler):
   def get(self):
-    template = JINJA_ENVIRONMENT.get_template("illustrations.html")
-    self.response.out.write(template.render())
+  	vars = {'title': 'Illustrations'}
+  	template = JINJA_ENVIRONMENT.get_template("illustrations.html")
+  	self.response.out.write(template.render(vars))
 
 class PaintingsHandler(webapp2.RequestHandler):
   def get(self):
-    template = JINJA_ENVIRONMENT.get_template("painting.html")
-    self.response.out.write(template.render())
-
+  	vars = {'title': 'Paintings'}
+  	template = JINJA_ENVIRONMENT.get_template("paintings.html")
+  	self.response.out.write(template.render(vars))
 
 app = webapp2.WSGIApplication([
   ('/', BaseHandler),
